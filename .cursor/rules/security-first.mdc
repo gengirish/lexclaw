@@ -1,0 +1,11 @@
+---
+description: Enforce secure defaults and no secret leakage
+alwaysApply: true
+---
+
+# Security First
+
+- Never hardcode secrets, keys, or credentials.
+- Never log raw sensitive payloads or tokens.
+- Validate authn/authz on every protected route.
+- Add tests for auth and security-critical behavior.

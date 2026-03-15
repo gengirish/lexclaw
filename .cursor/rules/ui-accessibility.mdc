@@ -1,0 +1,12 @@
+---
+description: Keep dashboard UI accessible and responsive
+globs: apps/web/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# UI Accessibility
+
+- Use semantic HTML and keyboard-accessible controls.
+- Provide visible labels and clear error messaging.
+- Keep color contrast and focus state standards.
+- Add tests for critical navigation and auth flows.

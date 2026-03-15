@@ -1,0 +1,11 @@
+---
+description: Enforce strict tenant boundary controls
+alwaysApply: true
+---
+
+# Tenant Isolation
+
+- Every tenant-owned record includes `org_id`.
+- Service logic must scope reads/writes by requesting org context.
+- Add tests for tenant breakout attempts.
+- Reject cross-tenant references by default.

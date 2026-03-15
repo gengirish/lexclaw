@@ -1,0 +1,11 @@
+{
+  "id": "contract-clause-risk-flagger",
+  "version": "1.0.0",
+  "requires_entitlement": true,
+  "execution_policy": {
+    "requires_human_approval": true,
+    "deterministic_output": true
+  },
+  "package_checksum": "pkg-contract-risk-v1",
+  "signature": "fb5c6ed056d6dac7a65a06c5f85543d370268b0571f63ece138cf20301eadd40"
+}

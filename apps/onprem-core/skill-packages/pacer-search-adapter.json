@@ -1,0 +1,11 @@
+{
+  "id": "pacer-search-adapter",
+  "version": "0.1.0-stub",
+  "requires_entitlement": true,
+  "execution_policy": {
+    "requires_human_approval": true,
+    "deterministic_output": true
+  },
+  "package_checksum": "pkg-pacer-stub",
+  "signature": "47aac26da25ae38ce2f698462fdb7ad6820d66668f7c8adb6531d611af9e74c5"
+}

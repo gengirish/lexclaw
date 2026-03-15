@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.api
+    ports:
+      - "8000:8000"
+    env_file:
+      - apps/api/.env.example
+
+  web:
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.web
+    ports:
+      - "3000:3000"
+    env_file:
+      - apps/web/.env.example
+    depends_on:
+      - api
+
+  onprem-core:
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.onprem
+    env_file:
+      - apps/onprem-core/.env.example

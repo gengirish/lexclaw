@@ -1,0 +1,11 @@
+{
+  "id": "matter-intake-triage",
+  "version": "0.1.0-stub",
+  "requires_entitlement": true,
+  "execution_policy": {
+    "requires_human_approval": true,
+    "deterministic_output": true
+  },
+  "package_checksum": "pkg-intake-stub",
+  "signature": "d8b90a85772a894c2264771baaec0d2fb0a570dea5406d5a63e96a460ec7878a"
+}
