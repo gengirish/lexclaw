@@ -1,0 +1,11 @@
+{
+  "id": "deposition-summarizer",
+  "version": "1.0.0",
+  "requires_entitlement": true,
+  "execution_policy": {
+    "requires_human_approval": true,
+    "deterministic_output": true
+  },
+  "package_checksum": "pkg-deposition-v1",
+  "signature": "d0d42ab23891ec9e19660cdc26ee9bb1d844fd16444e844133facf78c5e75dae"
+}

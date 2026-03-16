@@ -1,0 +1,11 @@
+---
+description: Prevent legal client content from entering cloud storage or logs
+alwaysApply: true
+---
+
+# No Legal Content In Cloud
+
+- Do not persist legal document, chat, or email body content in cloud DB.
+- Telemetry must be redacted or aggregated only.
+- Audit records contain metadata only (no privileged content).
+- Block PRs that introduce content fields in cloud schema.

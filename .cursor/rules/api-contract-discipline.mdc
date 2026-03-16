@@ -1,0 +1,12 @@
+---
+description: Keep API contracts explicit, versioned, and tested
+globs: apps/api/**/*.py
+alwaysApply: false
+---
+
+# API Contract Discipline
+
+- Expose endpoints under versioned prefixes (e.g. `/v1`).
+- Use request/response schemas for all handlers.
+- Avoid breaking response shapes without migration strategy.
+- Add integration tests for new contracts.

@@ -1,0 +1,11 @@
+{
+  "id": "deadline-extractor",
+  "version": "1.0.0",
+  "requires_entitlement": true,
+  "execution_policy": {
+    "requires_human_approval": false,
+    "deterministic_output": true
+  },
+  "package_checksum": "pkg-deadline-v1",
+  "signature": "14f95278c3eeeac5464ab67b0679469c94d805ec0ad0ff275e08d5b8ac9203fe"
+}
