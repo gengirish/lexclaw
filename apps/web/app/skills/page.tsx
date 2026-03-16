@@ -1,13 +1,19 @@
 export default function SkillsPage() {
   return (
-    <section className="card">
-      <h1>Skills Marketplace</h1>
-      <p>Phase 2 marketplace foundation is active in the API.</p>
-      <ul>
-        <li>Skill catalog listing and detail endpoints</li>
-        <li>Org skill purchase and entitlement issuance</li>
-        <li>Signed license issue, rotate, and validate flow</li>
-      </ul>
-    </section>
+    <div className="grid two">
+      <section className="card">
+        <p className="eyebrow">Marketplace</p>
+        <h1>Skills catalog</h1>
+        <p>Purchase and manage premium legal skills by organization entitlement.</p>
+      </section>
+      <section className="card">
+        <p className="eyebrow">Current capabilities</p>
+        <ul>
+          <li>Catalog list/detail APIs</li>
+          <li>Entitlement issuance on purchase</li>
+          <li>License issue/rotate/validate endpoints</li>
+        </ul>
+      </section>
+    </div>
   );
 }

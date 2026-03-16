@@ -4,23 +4,155 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f8fafc;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  background: #f1f5f9;
   color: #0f172a;
 }
 
 a {
-  color: #1d4ed8;
+  color: inherit;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
+
+p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.5;
+}
+
+ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: #334155;
+}
+
+.topbar {
+  height: 72px;
+  background: #0f172a;
+  color: #e2e8f0;
+  border-bottom: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.brand-title {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.brand-subtitle {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: calc(100vh - 72px);
+}
+
+.sidebar {
+  border-right: 1px solid #cbd5e1;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.content {
+  padding: 24px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .card {
-  border: 1px solid #cbd5e1;
+  border: 1px solid #dbe3ee;
   background: #ffffff;
-  border-radius: 8px;
-  padding: 16px;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.metric {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 6px 0;
+}
+
+.muted {
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 960px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid #cbd5e1;
+  }
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
 }

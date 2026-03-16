@@ -3,24 +3,47 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const navItems = [
+    { href: "/", label: "Dashboard" },
+    { href: "/settings/org", label: "Organization" },
+    { href: "/settings/team", label: "Team" },
+    { href: "/billing", label: "Billing" },
+    { href: "/skills", label: "Skills" },
+    { href: "/nodes", label: "Nodes" },
+    { href: "/audit", label: "Audit" },
+    { href: "/security", label: "Security" },
+    { href: "/auth/login", label: "Login" },
+    { href: "/auth/register", label: "Register" },
+  ];
+
   return (
     <html lang="en">
       <body>
-        <header className="border-b p-4">
-          <nav className="mx-auto flex max-w-6xl gap-4 text-sm">
-            <Link href="/">Dashboard</Link>
-            <Link href="/auth/login">Login</Link>
-            <Link href="/auth/register">Register</Link>
-            <Link href="/settings/org">Organization</Link>
-            <Link href="/settings/team">Team</Link>
-            <Link href="/billing">Billing</Link>
-            <Link href="/skills">Skills</Link>
-            <Link href="/nodes">Nodes</Link>
-            <Link href="/audit">Audit</Link>
-            <Link href="/security">Security</Link>
-          </nav>
+        <header className="topbar">
+          <div className="brand">
+            <span className="brand-logo">LC</span>
+            <div>
+              <p className="brand-title">LexClaw</p>
+              <p className="brand-subtitle">Legal AI Control Plane</p>
+            </div>
+          </div>
         </header>
-        <main className="mx-auto max-w-6xl p-6">{children}</main>
+        <div className="app-shell">
+          <aside className="sidebar" aria-label="Main navigation">
+            <nav>
+              <ul className="nav-list">
+                {navItems.map((item) => (
+                  <li key={item.href}>
+                    <Link className="nav-link" href={item.href}>
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </aside>
+          <main className="content">{children}</main>
+        </div>
       </body>
     </html>
   );
